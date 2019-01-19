@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Article from './../views/Article'
+import Article from './../views/Home'
 
 const Index = props => <Article {...props} />
 
