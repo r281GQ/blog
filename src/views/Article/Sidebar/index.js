@@ -25,7 +25,7 @@ const ListItem = styled.li`
 
 const RawNavLink = styled(Link)`
   text-decoration: none;
-  color: #000;
+  color: ${props => props.theme.colors.text};
 `
 
 const NavLinkElement = props => (

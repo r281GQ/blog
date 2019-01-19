@@ -4,6 +4,9 @@ export default {
   colors: {
     blue: '#07c',
     lightgray: '#f6f6ff',
+    text: '#303030',
+    textAlternate: '#dedede',
+    black: '#000',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   shadows: {

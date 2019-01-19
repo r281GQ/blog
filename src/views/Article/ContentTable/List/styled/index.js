@@ -10,13 +10,15 @@ const Ol = styled.ol`
 
 const ContentLink = styled(({ main, ...rest }) => <Link {...rest} />)`
   text-decoration: none;
-  color: #303030;
+  color: ${props => props.theme.colors.text};
   border-bottom: ${props =>
-    props.main ? '1px solid #303030' : '1px solid #dedede'};
+    props.main
+      ? `1px solid ${props.theme.colors.text}`
+      : `1px solid ${props.theme.colors.textAlternate}`};
 `
 
 ContentLink.propTypes = {
-  main: propTypes.bool.isRequired,
+  main: propTypes.bool,
 }
 
 export { ContentLink, Ol }

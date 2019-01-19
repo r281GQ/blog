@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 import { Box, Text } from 'rebass'
 
 import { Ol, ContentLink } from './styled'
@@ -27,5 +28,16 @@ const List = props => (
     ))}
   </OrderedList>
 )
+
+List.propTypes = {
+  main: propTypes.bool,
+  list: propTypes.arrayOf(
+    propTypes.shape({
+      name: propTypes.string.isRequired,
+      link: propTypes.string.isRequired,
+      subLinks: propTypes.array,
+    })
+  ),
+}
 
 export default List
