@@ -8,6 +8,8 @@ import Collapseable from './../../../components/Collapseable'
 
 import ArticleDetail from './ArticleDetail'
 
+import { FixWidth, FixedPosition } from './styled'
+
 const ListItem = styled.li`
   ${props => {
     const fs = props.theme.fontSizes[0]
@@ -41,15 +43,6 @@ const NavLink = props => (
     ))}
   </ul>
 )
-
-const FixWidth = styled.div`
-  width: 150px;
-`
-
-const FixedPosition = styled.div`
-  position: fixed;
-  width: 100px;
-`
 
 const Sidebar = props => (
   <Flex as={Collapseable} collapse={1} flexDirection={['row', 'column']}>
