@@ -7,8 +7,8 @@ import Preview from './ArticlePreview'
 import { Split } from './styled'
 
 const RecentArticles = props => (
-  <Box as={Split} maxWidth={600}>
-    <Text fontSize={7} my={4}>
+  <Box as={Split} maxWidth={600} px={props.subtle && 3}>
+    <Text fontSize={props.subtle ? 3 : 7} my={4}>
       {props.title}
     </Text>
     {props.recentArticles.map(article => (
@@ -18,6 +18,7 @@ const RecentArticles = props => (
 )
 
 RecentArticles.propTypes = {
+  subtle: propTypes.bool,
   title: propTypes.string.isRequired,
   recentArticles: propTypes.arrayOf(
     propTypes.shape({
