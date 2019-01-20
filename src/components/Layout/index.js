@@ -29,7 +29,7 @@ const Layout = props => (
           query SiteTitleQuery {
             site {
               siteMetadata {
-                title
+                siteTitle
               }
             }
           }

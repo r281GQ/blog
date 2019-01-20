@@ -4,7 +4,7 @@ import propTypes from 'prop-types'
 import { Box, Flex } from 'rebass'
 import styled from 'styled-components'
 
-import Collapseable from './../../components/Collapseable'
+import { Collapseable } from './../../components/Collapseable'
 
 import ArticleDetail from './ArticleDetail'
 

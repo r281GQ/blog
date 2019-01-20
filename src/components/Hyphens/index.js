@@ -4,4 +4,4 @@ const AutoHyphen = styled.div`
   hyphens: auto;
 `
 
-export { AutoHyphen }
+export default AutoHyphen
