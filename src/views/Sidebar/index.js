@@ -4,7 +4,7 @@ import propTypes from 'prop-types'
 import { Box, Flex } from 'rebass'
 import styled from 'styled-components'
 
-import Collapseable from './../../../components/Collapseable'
+import Collapseable from './../../components/Collapseable'
 
 import ArticleDetail from './ArticleDetail'
 
@@ -45,11 +45,16 @@ const NavLink = props => (
 )
 
 const Sidebar = props => (
-  <Flex as={Collapseable} collapse={1} flexDirection={['row', 'column']}>
+  <Flex
+    alignItems="flex-end"
+    as={Collapseable}
+    collapse={1}
+    flexDirection={['row', 'column']}
+  >
     <Box p={3} as={FixWidth} />
-    <Box fontSize={1} py={6} as={FixedPosition}>
+    <Box pr={4} fontSize={1} py={6} as={FixedPosition}>
       <NavLink mainLinks={props.mainLinks} />
-      <ArticleDetail {...props.details} />
+      {props.details && <ArticleDetail {...props.details} />}
     </Box>
   </Flex>
 )

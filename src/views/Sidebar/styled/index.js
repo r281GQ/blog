@@ -6,7 +6,7 @@ const FixWidth = styled.div`
 
 const FixedPosition = styled.div`
   position: fixed;
-  width: 100px;
+  width: 150px;
 `
 
 export { FixWidth, FixedPosition }
