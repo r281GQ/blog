@@ -15,7 +15,7 @@ Collapseable.propTypes = {
 }
 
 Collapseable.defaultProps = {
-  collapse: 0,
+  collapse: 1,
 }
 
 export { Collapseable }
