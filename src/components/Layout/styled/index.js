@@ -5,4 +5,8 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-export { Container }
+const FlexWrapper = styled.div`
+  width: 100%;
+`
+
+export { Container, FlexWrapper }

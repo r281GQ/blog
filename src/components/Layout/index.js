@@ -6,9 +6,10 @@ import { ThemeProvider } from 'styled-components'
 
 import theme, { GlobalStyles, ResetStyles } from './../../theme'
 
-import { Container } from './styled'
 import HorizontalNavbar from '../../views/HorizontalNavbar'
 import Sidebar from '../../views/Sidebar'
+
+import { Container, FlexWrapper } from './styled'
 
 const mainLinks = [
   { name: 'home', link: '/' },
@@ -36,7 +37,10 @@ const Layout = props => (
         render={() => (
           <>
             <Box px={[3, 5]} as={Container}>
-              <Flex flexDirection={['column', 'column', 'row']}>
+              <Flex
+                flexDirection={['column', 'column', 'row']}
+                as={FlexWrapper}
+              >
                 <HorizontalNavbar mainLinks={mainLinks} />
                 <Sidebar details={props.details} mainLinks={mainLinks} />
                 {props.children}
