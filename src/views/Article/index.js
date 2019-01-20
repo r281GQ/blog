@@ -1,10 +1,9 @@
 import React from 'react'
-import { Box, Flex } from 'rebass'
+import { Box } from 'rebass'
 
 import Layout from '../../components/Layout'
 
 import Heading from './Heading'
-import Sidebar from './Sidebar'
 import Body from './Body'
 
 const content =
@@ -73,14 +72,6 @@ const links = [
   },
 ]
 
-const mainLinks = [
-  { name: 'home', link: '/home' },
-  { name: 'articles', link: '/articles' },
-  { name: 'videos', link: '/videos' },
-  { name: 'books', link: '/books' },
-  { name: 'about', link: '/about' },
-]
-
 const details = {
   name: `Redis Streams and the Unified Log`,
   date: `November 8, 2017`,
@@ -89,18 +80,11 @@ const details = {
 }
 
 const Article = () => (
-  <Layout>
-    <Flex
-      mt={3}
-      flexDirection={['column', 'column', 'row']}
-      justifyContent="space-between"
-    >
-      <Sidebar mainLinks={mainLinks} details={details} />
-      <Box flex="0.9 1 0">
-        <Heading title="Redis Streams and the Unified Log" />
-        <Body links={links} content={content} />
-      </Box>
-    </Flex>
+  <Layout details={details}>
+    <Box flex="1 1 0">
+      <Heading title="Redis Streams and the Unified Log" />
+      <Body links={links} content={content} />
+    </Box>
   </Layout>
 )
 

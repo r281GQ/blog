@@ -52,10 +52,17 @@ const Sidebar = props => (
     flexDirection={['row', 'column']}
   >
     <Box p={3} as={FixWidth} />
-    <Box pr={4} fontSize={1} py={6} as={FixedPosition}>
+    <Flex
+      flexDirection="column"
+      collapse={1}
+      pr={4}
+      fontSize={1}
+      py={6}
+      as={FixedPosition}
+    >
       <NavLink mainLinks={props.mainLinks} />
       {props.details && <ArticleDetail {...props.details} />}
-    </Box>
+    </Flex>
   </Flex>
 )
 
