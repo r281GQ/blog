@@ -1,13 +1,22 @@
 import React from 'react'
-
 import { StaticQuery, graphql } from 'gatsby'
 import propTypes from 'prop-types'
-import { Box } from 'rebass'
+import { Box, Flex } from 'rebass'
 import { ThemeProvider } from 'styled-components'
 
 import theme, { GlobalStyles, ResetStyles } from './../../theme'
 
 import { Container } from './styled'
+import HorizontalNavbar from '../../views/HorizontalNavbar'
+import Sidebar from '../../views/Sidebar'
+
+const mainLinks = [
+  { name: 'home', link: '/' },
+  { name: 'articles', link: '/articles' },
+  { name: 'videos', link: '/videos' },
+  { name: 'books', link: '/books' },
+  { name: 'about', link: '/about' },
+]
 
 const Layout = props => (
   <ThemeProvider theme={theme}>
@@ -25,9 +34,15 @@ const Layout = props => (
           }
         `}
         render={() => (
-          <Box px={4} as={Container}>
-            {props.children}
-          </Box>
+          <>
+            <Box px={[3, 5]} as={Container}>
+              <Flex flexDirection={['column', 'column', 'row']}>
+                <HorizontalNavbar mainLinks={mainLinks} />
+                <Sidebar details={props.details} mainLinks={mainLinks} />
+                {props.children}
+              </Flex>
+            </Box>
+          </>
         )}
       />
     </>
