@@ -1,8 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    siteUrl: `unexpectedtoken.io`,
+    pathPrefix: '',
+    siteTitle: 'unexpectedtoken',
+    siteLogo: `logo.png`,
+    siteDescription: 'Thoughts on web engineering.',
+    siteTitleAlt:
+      'Some articles from the realm of react, redux, graphql, reasonml and much more.',
+    userTwitter: 'https://twitter.com/endre_vegh',
+    userGitHub: 'https://github.com/r281GQ',
+    userLinkedIn: 'https://www.linkedin.com/in/endre-vegh-b4539114b/',
+    siteFBAppID: '',
+    author: 'Endre Vegh',
+    aboutPicture: `src/images/profile.png`,
+    ownRepo: 'https://github.com/r281GQ/blog',
   },
   plugins: [
     {
@@ -22,6 +33,28 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/posts/md`,
+        name: 'markdown-pages',
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
