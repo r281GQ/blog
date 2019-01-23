@@ -12,7 +12,7 @@ const ListItem = styled.li`
 
   list-style-type: none;
   text-align: right;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: bold;
 `
 

@@ -1,67 +1,27 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import propTypes from 'prop-types'
-import { Box, Flex } from 'rebass'
-import styled from 'styled-components'
+import { Flex } from 'rebass'
 
 import { Collapseable } from './../../components/Collapseable'
 
-import ArticleDetail from './ArticleDetail'
-
-import { FixWidth, FixedPosition } from './styled'
-
-const ListItem = styled.li`
-  ${props => {
-    const fs = props.theme.fontSizes[0]
-    const lh = props.theme.space[1]
-
-    return `font-size: ${fs}px;
-            line-height: ${lh}px;`
-  }}
-
-  list-style-type: none;
-  text-align: right;
-  text-transform: uppercase;
-  font-weight: bold;
-`
-
-const RawNavLink = styled(Link)`
-  text-decoration: none;
-  color: ${props => props.theme.colors.text};
-`
-
-const NavLinkElement = props => (
-  <Box as={ListItem} my={3}>
-    <RawNavLink to={props.link}>{props.name}</RawNavLink>
-  </Box>
-)
-
-const NavLink = props => (
-  <ul>
-    {props.mainLinks.map(link => (
-      <NavLinkElement key={link.name} {...link} />
-    ))}
-  </ul>
-)
+import NavLink from './NavLink'
 
 const Sidebar = props => (
   <Flex
+    flex="0 1 auto"
     alignItems="flex-end"
     as={Collapseable}
-    collapse={1}
-    flexDirection={['row', 'column']}
+    flexDirection={['row', 'column', 'column', 'column']}
   >
-    <Box p={3} as={FixWidth} />
     <Flex
       flexDirection="column"
       collapse={1}
       pr={4}
       fontSize={1}
       py={6}
-      as={FixedPosition}
+      as={Collapseable}
     >
       <NavLink mainLinks={props.mainLinks} />
-      {props.details && <ArticleDetail {...props.details} />}
     </Flex>
   </Flex>
 )
