@@ -1,33 +1,53 @@
 import React from 'react'
 
+import Page from '../containers/Page'
+
 import Layout from './../components/Layout'
 
 import RecentArticles from './../views/RecentArticles'
 
-const recentArticles = [
-  {
-    title: 'eTweeting for 10,000 Years: An Experiment in Autonomous Software',
-    excerpt: `Using the design principles of a 10,000 year clock to build a program that's intended to run on a macro timescale.`,
-    date: 'July 20, 2018',
-    image: `https://brandur.org/assets/10000-years/hook@2x.jpg`,
-  },
-  {
-    title: 'rTweeting for 10,000 Years: An Experiment in Autonomous Software',
-    excerpt: `Using the design principles of a 10,000 year clock to build a program that's intended to run on a macro timescale.`,
-    date: 'July 20, 2018',
-    image: `https://brandur.org/assets/10000-years/hook@2x.jpg`,
-  },
-  {
-    title: 'qTweeting for 10,000 Years: An Experiment in Autonomous Software',
-    excerpt: `Using the design principles of a 10,000 year clock to build a program that's intended to run on a macro timescale.`,
-    date: 'July 20, 2018',
-    image: `https://brandur.org/assets/10000-years/hook@2x.jpg`,
-  },
-]
-const Index = () => (
+const Index = props => (
   <Layout>
-    <RecentArticles recentArticles={recentArticles} title="Articles" />
+    <Page {...props}>
+      {({ posts }) => (
+        <RecentArticles
+          recentArticles={posts.slice(0, 5)}
+          title="Articles"
+          pagination={{
+            left: undefined,
+            right: posts.length > 5 ? `/articles/2` : undefined,
+          }}
+        />
+      )}
+    </Page>
   </Layout>
 )
 
 export default Index
+
+export const firstEntries = graphql`
+  query firstEntries {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "journal" } } }
+      skip: 0
+      limit: 6
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            description
+            title
+            cover
+            date
+            tags
+            src
+            size
+            path
+          }
+        }
+      }
+    }
+  }
+`
