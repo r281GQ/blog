@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `unexpectedtoken.io`,
     pathPrefix: '',
-    siteTitle: 'unexpectedtoken',
+    siteTitle: 'unexpectedtoken.io',
     siteLogo: `logo.png`,
     siteDescription: 'Thoughts on web engineering.',
     siteTitleAlt:
