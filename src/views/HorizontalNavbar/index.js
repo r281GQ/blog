@@ -8,12 +8,14 @@ const HorizontalNavbar = props => (
   <Flex
     as={NavContainer}
     collapse={1}
+    justifyContent="center"
     py={4}
-    flexDirection={['row', 'row', 'column']}
+    fontSize={[1, 2]}
+    flexDirection={['row']}
   >
     {props.mainLinks.map(item => (
       <Box key={item.name} mr={3}>
-        <Link to={item.link}>{item.name.toUpperCase()}</Link>
+        <Link to={item.link}>{item.name}</Link>
       </Box>
     ))}
   </Flex>
