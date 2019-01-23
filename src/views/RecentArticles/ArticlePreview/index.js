@@ -1,22 +1,18 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import { Box, Image, Flex, Text } from 'rebass'
+import { Box, Flex, Text } from 'rebass'
 
 const Preview = props => (
-  <Box my={3} fontSize={0}>
+  <Box my={4} fontSize={0}>
     <Flex>
-      <Box flex="1 1 1">
-        <Image src={props.image} />
-      </Box>
-      <Box pl={3}>
-        <Text fontWeight="bold">
-          {props.title}{' '}
-          <span style={{ fontWeight: 'lighter', color: '#dedede' }}>
-            {props.date}
-          </span>
-        </Text>
+      <Box pl={[0, 3]} flex="1">
+        <Text fontWeight="bold">{props.title}</Text>
+        <Flex justifyContent="space-between">
+          <Text fontWeight="lighter"> {props.date} </Text>
+          <Text fontWeight="lighter"> {props.tags} </Text>
+        </Flex>
         <Text mt={2} fontFamily="Muli">
-          {props.excerpt}
+          <div dangerouslySetInnerHTML={{ __html: props.excerpt }} />
         </Text>
       </Box>
     </Flex>
@@ -26,8 +22,11 @@ const Preview = props => (
 Preview.propTypes = {
   title: propTypes.string.isRequired,
   excerpt: propTypes.string.isRequired,
-  date: propTypes.string.isRequired,
-  image: propTypes.string.isRequired,
+  date: propTypes.number.isRequired,
+  cover: propTypes.string.isRequired,
+  content: propTypes.string.isRequired,
+  tags: propTypes.string.isRequired,
+  path: propTypes.string.isRequired,
 }
 
 export default Preview
