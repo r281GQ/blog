@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "unexpectedtoken.io",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "personal blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Endre Vegh",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.76",
@@ -21,6 +21,7 @@
     "gatsby-transformer-sharp": "^2.1.8",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
+    "ramda": "^0.26.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
@@ -29,6 +30,8 @@
     "url-join": "^4.0.0"
   },
   "keywords": [
+    "blog",
+    "react",
     "gatsby"
   ],
   "license": "MIT",
@@ -37,16 +40,15 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "aws": "aws s3 sync \"public/\" \"s3://unexpectedtoken.io\" --delete --acl \"public-read\"",
+    "deploy": "build && aws"
   },
   "devDependencies": {
     "prettier": "^1.15.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/r281gq/blog"
   }
 }
