@@ -8,7 +8,7 @@ import { Container } from './styled'
 const About = () => (
   <Box flex=" 1" as={Container}>
     <Text fontSize={7} my={4}>
-      About
+      about
     </Text>
     <Image
       src={`https://images.unsplash.com/photo-1547828535-340f8a840376?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80`}
