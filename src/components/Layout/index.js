@@ -11,11 +11,14 @@ import Sidebar from '../../views/Sidebar'
 
 import { Container, FlexWrapper } from './styled'
 
+import './prism.js.css'
+
 const mainLinks = [
   { name: 'home', link: '/' },
   { name: 'articles', link: '/articles' },
   { name: 'videos', link: '/videos' },
   { name: 'books', link: '/books' },
+  { name: 'contact', link: '/contact' },
   { name: 'about', link: '/about' },
 ]
 
@@ -36,14 +39,14 @@ const Layout = props => (
         `}
         render={() => (
           <>
-            <Box px={[3, 5]} as={Container}>
+            <Box px={[3]} as={Container}>
               <Flex
-                flexDirection={['column', 'column', 'row']}
+                flexDirection={['column', 'column', 'row', 'row']}
                 as={FlexWrapper}
               >
                 <HorizontalNavbar mainLinks={mainLinks} />
-                <Sidebar details={props.details} mainLinks={mainLinks} />
-                {props.children}
+                <Sidebar mainLinks={mainLinks} />
+                <Box flex="1 1 auto">{props.children}</Box>
               </Flex>
             </Box>
           </>
