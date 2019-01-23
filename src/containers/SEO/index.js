@@ -81,28 +81,7 @@ export default class SearchEngineOptimization extends Component {
     const title = isJournal ? postMeta.title : siteTitle
     const description = isJournal ? excerpt : siteDescription
 
-    let image = ''
-    if (process.env.NODE_ENV === 'development') {
-      image = isJournal
-        ? urljoin(
-            siteUrl,
-            pathPrefix,
-            require(`../../../content/pictures/${postMeta.cover}`).substring(22)
-          )
-        : urljoin(
-            siteUrl,
-            pathPrefix,
-            require(`../../images/${siteLogo}`).substring(22)
-          )
-    } else {
-      image = isJournal
-        ? urljoin(
-            siteUrl,
-            pathPrefix,
-            require(`../../../content/pictures/${postMeta.cover}`)
-          )
-        : urljoin(siteUrl, pathPrefix, require(`../../images/${siteLogo}`))
-    }
+    let image = siteLogo
 
     const postURL = urljoin(siteUrl, pathPrefix, postMeta.path)
     const blogURL = urljoin(siteUrl, pathPrefix)
