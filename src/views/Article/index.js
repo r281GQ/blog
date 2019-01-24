@@ -40,11 +40,8 @@ export const journalQuery = graphql`
         description
         title
         path
-        cover
         date
         tags
-        src
-        size
         location
       }
     }

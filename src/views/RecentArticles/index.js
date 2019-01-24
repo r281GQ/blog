@@ -27,7 +27,6 @@ RecentArticles.propTypes = {
       title: propTypes.string.isRequired,
       excerpt: propTypes.string.isRequired,
       date: propTypes.number.isRequired,
-      cover: propTypes.string.isRequired,
       content: propTypes.string.isRequired,
       tags: propTypes.string.isRequired,
       path: propTypes.string.isRequired,

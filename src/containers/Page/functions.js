@@ -68,7 +68,6 @@ export const getPosts = R.pipe(
           date: x.frontmatter.date,
           excerpt: getExcerpt({ content: x.html }),
           path: x.frontmatter.path,
-          cover: x.frontmatter.cover,
           tags: x.frontmatter.tags,
           content: x.html,
         }

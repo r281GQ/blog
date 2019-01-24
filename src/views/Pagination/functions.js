@@ -80,7 +80,8 @@ export const justifyContent = pipe(
     [propEq('length', 2), () => `space-between`],
     [
       pipe(
-        x => x[0],
+        x => (x ? x[0] : {}),
+        x => (x ? x : {}),
         propEq(`direction`, `newer`)
       ),
       () => `flex-end`,

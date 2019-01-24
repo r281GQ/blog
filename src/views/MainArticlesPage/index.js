@@ -37,7 +37,6 @@ export const allBlogPost = graphql`
           frontmatter {
             path
             title
-            cover
             date
             tags
           }

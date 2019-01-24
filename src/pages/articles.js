@@ -39,11 +39,8 @@ export const firstEntries = graphql`
           frontmatter {
             description
             title
-            cover
             date
             tags
-            src
-            size
             path
           }
         }

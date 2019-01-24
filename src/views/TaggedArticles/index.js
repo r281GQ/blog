@@ -32,7 +32,6 @@ export const filterJournalsByTags = graphql`
           frontmatter {
             path
             title
-            cover
             date
             tags
           }
