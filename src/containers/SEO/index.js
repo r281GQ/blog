@@ -104,7 +104,7 @@ export default class SearchEngineOptimization extends Component {
     }
   }
 
-  render = () => {
+  render() {
     return (
       <StaticQuery
         query={graphql`
@@ -145,7 +145,11 @@ export default class SearchEngineOptimization extends Component {
 
           return (
             <Helmet
-              title={title}
+              title={
+                this.props.isJournal
+                  ? title + ' - ' + data.site.siteMetadata.siteTitle
+                  : this.props.path + ' - ' + title
+              }
               link={[
                 { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
               ]}
