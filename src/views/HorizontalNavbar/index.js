@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Box, Flex } from 'rebass'
+import { Box, Flex, Text } from 'rebass'
 
 import { NavContainer } from './styled'
 
@@ -8,14 +8,16 @@ const HorizontalNavbar = props => (
   <Flex
     as={NavContainer}
     collapse={1}
-    justifyContent="center"
+    justifyContent={['space-between']}
     py={4}
-    fontSize={[1, 2]}
+    fontSize={[0, 1, 2]}
     flexDirection={['row']}
   >
     {props.mainLinks.map(item => (
-      <Box key={item.name} mr={3}>
-        <Link to={item.link}>{item.name}</Link>
+      <Box key={item.name}>
+        <Link to={item.link}>
+          <Text textAlign="center">{item.name}</Text>
+        </Link>
       </Box>
     ))}
   </Flex>

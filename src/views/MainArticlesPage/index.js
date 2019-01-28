@@ -6,7 +6,7 @@ import Layout from './../../components/Layout'
 import Page from '../../containers/Page'
 
 const Main = props => (
-  <Layout>
+  <Layout name="articles">
     <Page {...props}>
       {({ posts, paginationProps }) => (
         <RecentArticles
