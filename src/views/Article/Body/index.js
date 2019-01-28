@@ -20,8 +20,8 @@ const Body = props => (
       as={Hyphens}
       css={{ maxWidth: '800px' }}
       fontFamily="Muli"
-      fontSize={1}
-      lineHeight={1.6}
+      fontSize={[0, 2]}
+      lineHeight={1.8}
     >
       <div dangerouslySetInnerHTML={{ __html: props.content }} />
     </Text>
