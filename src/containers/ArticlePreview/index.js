@@ -1,9 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import getExcerpt from './../../util/getExcerpt'
-
-import { formatTags, getDate, getHtml, getUrl } from './functions'
+import { formatTags, getDate, getUrl } from './functions'
 
 export default props => (
   <StaticQuery

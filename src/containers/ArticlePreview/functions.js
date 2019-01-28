@@ -1,4 +1,4 @@
-import { __, append, map, path, pathOr, pipe } from 'ramda'
+import { map, path, pathOr, pipe } from 'ramda'
 import urljoin from 'url-join'
 
 import formatDate from '../../util/formatDate'
