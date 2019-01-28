@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const ListItem = styled.li`
   ${props => {
-    const fs = props.theme.fontSizes[0]
+    const fs = props.theme.fontSizes[1]
     const lh = props.theme.space[1]
 
     return `font-size: ${fs}px;

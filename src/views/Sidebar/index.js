@@ -17,7 +17,7 @@ const Sidebar = props => (
       flexDirection="column"
       collapse={1}
       pr={4}
-      fontSize={1}
+      fontSize={[0, 1]}
       py={6}
       as={Collapseable}
     >

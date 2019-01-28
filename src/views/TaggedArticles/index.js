@@ -7,7 +7,7 @@ import Layout from './../../components/Layout'
 import RecentArticles from './../RecentArticles'
 
 const TaggedArticles = props => (
-  <Layout>
+  <Layout name="articles">
     <Page {...props}>
       {({ posts }) => (
         <RecentArticles
