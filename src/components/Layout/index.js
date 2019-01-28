@@ -4,6 +4,8 @@ import propTypes from 'prop-types'
 import { Box, Flex } from 'rebass'
 import { ThemeProvider } from 'styled-components'
 
+import Seo from './../../containers/SEO'
+
 import theme, { GlobalStyles, ResetStyles } from './../../theme'
 
 import HorizontalNavbar from '../../views/HorizontalNavbar'
@@ -40,6 +42,7 @@ const Layout = props => (
         render={() => (
           <>
             <Box px={[3]} as={Container}>
+              <Seo isJournal={false} path={props.name} />
               <Flex
                 flexDirection={['column', 'column', 'row', 'row']}
                 as={FlexWrapper}
