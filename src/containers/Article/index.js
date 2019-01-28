@@ -20,7 +20,7 @@ import {
 export default props => (
   <StaticQuery
     query={graphql`
-      query journalUrl {
+      query journalPreviewUrl {
         site {
           siteMetadata {
             siteUrl

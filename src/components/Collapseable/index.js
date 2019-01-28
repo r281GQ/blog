@@ -6,7 +6,7 @@ const Collapseable = styled.div`
 
   @media only screen and (min-width: ${props =>
       props.theme.breakpoints[props.collapse]}) {
-    display: inherit;
+    display: ${props => (props.x ? `unset` : `inherit`)};
   }
 `
 
