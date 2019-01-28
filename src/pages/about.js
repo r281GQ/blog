@@ -5,7 +5,7 @@ import Layout from './../components/Layout'
 import About from './../views/About'
 
 const Index = props => (
-  <Layout>
+  <Layout name="about">
     <About {...props} />
   </Layout>
 )

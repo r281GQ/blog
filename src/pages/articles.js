@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import Page from '../containers/Page'
 
@@ -7,7 +8,7 @@ import Layout from './../components/Layout'
 import RecentArticles from './../views/RecentArticles'
 
 const Index = props => (
-  <Layout>
+  <Layout name="articles">
     <Page {...props}>
       {({ posts }) => (
         <RecentArticles

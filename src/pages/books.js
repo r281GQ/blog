@@ -5,7 +5,7 @@ import Layout from './../components/Layout'
 import NotReady from '../views/NotReady'
 
 const Index = props => (
-  <Layout>
+  <Layout name="books">
     <NotReady {...props} message="Soon..." />
   </Layout>
 )
