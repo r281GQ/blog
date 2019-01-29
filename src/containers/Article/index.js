@@ -11,10 +11,10 @@ import {
   getFrontMatter,
   getHtml,
   getLocation,
-  getSize,
-  getSrc,
   getTitle,
   getUrl,
+  getRepo,
+  getAlternates,
 } from './functions'
 
 export default props => (
@@ -36,10 +36,10 @@ export default props => (
           tags: formatTags(props),
           title: getTitle(props),
           content: getHtml(props),
-          src: getSrc(props),
-          size: getSize(props),
           url: getUrl(data, props),
           location: getLocation(props),
+          repo: getRepo(props),
+          alternates: getAlternates(props),
         })}
         <SEO
           isJournal

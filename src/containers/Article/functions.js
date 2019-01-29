@@ -1,7 +1,22 @@
-import { __, append, map, path, pathOr, pipe } from 'ramda'
+import State from 'crocks/State'
+import {
+  __,
+  append,
+  always,
+  converge,
+  concat,
+  ifElse,
+  map,
+  path,
+  pathEq,
+  pathOr,
+  pipe,
+} from 'ramda'
 import urljoin from 'url-join'
 
 import formatDate from './../../util/formatDate'
+
+const { get, modify } = State
 
 const onFrontMatter = append(__, ['data', 'markdownRemark', 'frontmatter'])
 
@@ -20,12 +35,34 @@ export const getDate = pipe(
   formatDate
 )
 
-export const getSrc = path(onFrontMatter('src'))
+export const getRepo = ifElse(
+  pathEq(onFrontMatter('repo'), 'null'),
+  always(null),
+  path(onFrontMatter('repo'))
+)
 
-export const getSize = path(onFrontMatter('size'))
+const getDev = ifElse(pathEq(onFrontMatter('dev'), 'null'), always(null), x => [
+  { d: path(onFrontMatter('dev'))(x) },
+])
+
+const getHlp = ifElse(pathEq(onFrontMatter('hlp'), 'null'), always(null), x => [
+  { x: path(onFrontMatter('hlp'))(x) },
+])
+
+const checkArray = el => ifElse(always(Array.isArray(el)), always(el), () => [])
+
+const addElement = el => get(checkArray(el)).chain(x => modify(concat(x)))
+
+const createArray = (a, b) => addElement(a).chain(always(addElement(b)))
+
+export const getAlternates = converge(
+  (a, b) => createArray(a, b).execWith([]),
+  [getDev, getHlp]
+)
 
 export const getUrl = (data, props) =>
   urljoin(
+    `http://`,
     data.site.siteMetadata.siteUrl,
     data.site.siteMetadata.pathPrefix,
     props.data.markdownRemark.frontmatter.path
