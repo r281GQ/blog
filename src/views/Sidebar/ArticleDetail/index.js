@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import propTypes from 'prop-types'
 import { Box, Text, Flex } from 'rebass'
 
-import { renderTagLink } from './functions'
-
 import { Collapseable } from './../../../components/Collapseable'
+import { LinkedIn, Facebook, Twitter } from './../../../components/ShareButton'
+
+import { renderTagLink } from './functions'
 
 const ArticleDetail = props => (
   <Box fontSize={0} flex="0.7">
@@ -28,15 +28,17 @@ const ArticleDetail = props => (
         </Text>
         <Text>{props.date}</Text>
       </Box>
-      <Flex
-        my={[0, 2]}
-        justifyContent="center"
-        flexDirection={['column']}
-        flex="1 1 auto"
-      >
-        <Text fontWeight="bold">Repo</Text>
-        <Text>link</Text>
-      </Flex>
+      {props.repo && (
+        <Flex
+          my={[0, 2]}
+          justifyContent="center"
+          flexDirection={['column']}
+          flex="1 1 auto"
+        >
+          <Text fontWeight="bold">Repo</Text>
+          <Text>link</Text>
+        </Flex>
+      )}
       <Flex
         my={[2]}
         justifyContent="center"
@@ -59,13 +61,23 @@ const ArticleDetail = props => (
         flex="1 1 auto"
       >
         <Text fontWeight="bold">Share</Text>
-        <Text>icons</Text>
+        <Flex justifyContent="center">
+          <LinkedIn url={props.url} />
+          <Facebook url={props.url} />
+          <Twitter url={props.url} />
+        </Flex>
       </Flex>
       <Box collapse={1} as={Collapseable} reverse my={2} flex="1 1 auto">
         <Text fontWeight="bold">You can also read it on</Text>
-        <Link to="">
-          <Text>icons</Text>
-        </Link>
+        {props.alternates.map(i => (
+          <a
+            key={Object.keys(i)[0]}
+            target="blank"
+            href={`https://${Object.values(i)[0]}`}
+          >
+            <Text>{`${Object.keys(i)[0]}`}</Text>
+          </a>
+        ))}
       </Box>
     </Flex>
   </Box>

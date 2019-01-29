@@ -21,8 +21,9 @@ const Article = props => (
               tags: renderProps.tags,
               date: renderProps.date,
               location: renderProps.location,
-              links: null,
-              repo: null,
+              url: renderProps.url,
+              alternates: renderProps.alternates,
+              repo: renderProps.repo,
             }}
             content={renderProps.content}
           />
@@ -37,12 +38,16 @@ export const journalQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        description
-        title
-        path
+        category
         date
-        tags
+        dev
+        hlp
+        description
         location
+        path
+        repo
+        tags
+        title
       }
     }
   }
