@@ -42,6 +42,7 @@ export const journalQuery = graphql`
         date
         dev
         hlp
+        med
         description
         location
         path
