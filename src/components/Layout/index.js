@@ -20,7 +20,6 @@ const mainLinks = [
   { name: 'articles', link: '/articles' },
   { name: 'videos', link: '/videos' },
   { name: 'books', link: '/books' },
-  { name: 'contact', link: '/contact' },
   { name: 'about', link: '/about' },
 ]
 
