@@ -10,6 +10,8 @@ module.exports = {
     userTwitter: 'https://twitter.com/endre_vegh',
     userGitHub: 'https://github.com/r281GQ',
     userLinkedIn: 'https://www.linkedin.com/in/endre-vegh-b4539114b/',
+    userYoutube: '',
+    userEmail: 'mailto:endre.vegh@yahoo.com',
     siteFBAppID: '',
     author: 'Endre Vegh',
     aboutPicture: `src/images/profile.png`,
