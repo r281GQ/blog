@@ -11,7 +11,7 @@ import theme, { GlobalStyles, ResetStyles } from './../../theme'
 import HorizontalNavbar from '../../views/HorizontalNavbar'
 import Sidebar from '../../views/Sidebar'
 
-import { Container, FlexWrapper } from './styled'
+import { FlexWrapper } from './styled'
 
 import './prism.js.css'
 
@@ -40,17 +40,18 @@ const Layout = props => (
         `}
         render={() => (
           <>
-            <Box px={[3]} as={Container}>
+            <Flex px={[3]} flexDirection="row">
+              <Sidebar mainLinks={mainLinks} />
               <Seo isJournal={false} path={props.name} />
               <Flex
                 flexDirection={['column', 'column', 'row', 'row']}
                 as={FlexWrapper}
               >
                 <HorizontalNavbar mainLinks={mainLinks} />
-                <Sidebar mainLinks={mainLinks} />
+
                 <Box flex="1 1 auto">{props.children}</Box>
               </Flex>
-            </Box>
+            </Flex>
           </>
         )}
       />
