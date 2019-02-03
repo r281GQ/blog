@@ -39,13 +39,19 @@ const About = props => (
               alignItems="baseline"
               my={[4, 0]}
             >
-              <Text as={Collapseable} my={4} textAlign="center" collapse={0}>
+              <Text
+                alignSelf="center"
+                as={Collapseable}
+                my={4}
+                textAlign="center"
+                collapse={0}
+              >
                 contact me
               </Text>
               <Box as={Collapseable} collapse={0}>
                 <Text mb={3}>
                   Here are some links to check out. If you have any question
-                  feel free to drop me a message using one of the option below.
+                  feel free to drop me a message using one of the options below.
                 </Text>
               </Box>
               <Text>
@@ -73,7 +79,17 @@ const About = props => (
                   youtube
                 </ExternalLink>
               </Text>
-              <Text my={3}>Site</Text>
+            </Flex>
+            <Flex as={Collapseable} collapse={0} flexDirection="column">
+              <Text textAlign="center" my={3}>
+                Some thoughts about this site
+              </Text>
+              <Text my={3}>
+                This is built with Gatsby.js sitting on AWS. Gatsby is an
+                amazing static-site generator built around React, Redux, Graphql
+                and SSR. I am using Rebass as a component library here with some
+                Ramda to set up the neccessary logic.
+              </Text>
             </Flex>
           </Flex>
           <Flex px={3} flex="1" width="100%" flexDirection="column">
