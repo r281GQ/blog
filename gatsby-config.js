@@ -10,7 +10,8 @@ module.exports = {
     userTwitter: 'https://twitter.com/endre_vegh',
     userGitHub: 'https://github.com/r281GQ',
     userLinkedIn: 'https://www.linkedin.com/in/endre-vegh-b4539114b/',
-    userYoutube: '',
+    userYoutube:
+      'https://www.youtube.com/user/TheEchoes88/featured?view_as=subscriber',
     userEmail: 'mailto:endre.vegh@yahoo.com',
     siteFBAppID: '',
     author: 'Endre Vegh',
@@ -18,6 +19,20 @@ module.exports = {
     ownRepo: 'https://github.com/r281GQ/blog',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-133645004-1',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

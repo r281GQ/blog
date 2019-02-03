@@ -1,7 +1,8 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled from 'styled-components'
 
-const Ext = styled.a`
+const Ext = styled(OutboundLink)`
   text-decoration: underline;
 `
 

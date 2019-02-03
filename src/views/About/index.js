@@ -26,7 +26,7 @@ const About = props => (
       }
     `}
     render={result => (
-      <Box flex="1" as={Container} value={800}>
+      <Box flex="1" as={Container} value={1000}>
         <Text fontSize={7} my={4}>
           about
         </Text>
