@@ -92,7 +92,7 @@ const About = props => (
               </Text>
             </Flex>
           </Flex>
-          <Flex px={3} flex="1" width="100%" flexDirection="column">
+          <Flex mb={4} px={3} flex="1" width="100%" flexDirection="column">
             <Text as={Hyphens} fontFamily="Muli">
               <div dangerouslySetInnerHTML={{ __html: props.content }} />
             </Text>

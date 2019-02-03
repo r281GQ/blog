@@ -49,7 +49,9 @@ const Layout = props => (
               >
                 <HorizontalNavbar mainLinks={mainLinks} />
 
-                <Box flex="1 1 auto">{props.children}</Box>
+                <Box css={{ overflow: 'hidden' }} flex="1 1 auto">
+                  {props.children}
+                </Box>
               </Flex>
             </Flex>
           </>
