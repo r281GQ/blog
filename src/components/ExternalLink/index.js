@@ -1,9 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Ext = styled.a`
+  text-decoration: underline;
+`
 
 const ExternalLink = props => (
-  <a href={props.to} target="blank">
+  <Ext href={props.to} target="blank">
     {props.children}
-  </a>
+  </Ext>
 )
 
 export default ExternalLink
