@@ -40,6 +40,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "lint":"eslint .",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
@@ -48,6 +49,8 @@
     "deploy": "build && aws"
   },
   "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.15.2"
   },
   "repository": {
