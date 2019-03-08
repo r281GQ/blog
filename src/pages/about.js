@@ -1,10 +1,10 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import * as R from 'ramda'
 
 import Layout from './../components/Layout'
 
 import About from './../views/About'
-
-import * as R from 'ramda'
 
 const getContent = R.compose(
   R.path(['node', 'html']),
