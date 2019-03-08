@@ -5,18 +5,12 @@ import urljoin from 'url-join'
 
 import favicon from './../../images/logo.png'
 
-export default class SearchEngineOptimization extends Component {
-  static defaultProps = {
-    isJournal: true,
-    postMeta: {
-      path: '',
-    },
+class SEO extends Component {
+  renderOpenGraphTypeMeta(isJournal) {
+    return isJournal ? <meta property="og:type" content="article" /> : null
   }
 
-  renderOpenGraphTypeMeta = isJournal =>
-    isJournal ? <meta property="og:type" content="article" /> : null
-
-  getSchema = ({ meta, isJournal }) => {
+  getSchema({ meta, isJournal }) {
     const { title, description, image, postURL, blogURL, alternateName } = meta
 
     const schemaOrgJSONLD = [
@@ -65,7 +59,7 @@ export default class SearchEngineOptimization extends Component {
     return schemaOrgJSONLD
   }
 
-  getMetaData = ({ siteMetadata, isJournal, postMeta, excerpt }) => {
+  getMetaData({ siteMetadata, isJournal, postMeta, excerpt }) {
     const {
       siteUrl,
       pathPrefix,
@@ -187,3 +181,12 @@ export default class SearchEngineOptimization extends Component {
     )
   }
 }
+
+SEO.defaultProps = {
+  isJournal: true,
+  postMeta: {
+    path: '',
+  },
+}
+
+export default SEO

@@ -26,7 +26,7 @@ const getDirectionProps = pick(['left', 'right'])
  */
 const arrify = props =>
   keys(props).map(name => ({
-    direction: name === 'left' ? `older` : `newer`,
+    direction: name === 'right' ? `older` : `newer`,
     value: props[name],
   }))
 
@@ -84,8 +84,8 @@ export const justifyContent = pipe(
         x => (x ? x : {}),
         propEq(`direction`, `newer`)
       ),
-      () => `flex-end`,
+      () => `flex-start`,
     ],
-    [() => true, () => `flex-start`],
+    [() => true, () => `flex-end`],
   ])
 )
