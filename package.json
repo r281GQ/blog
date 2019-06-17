@@ -7,7 +7,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "crocks": "^0.11.1",
-    "gatsby": "^2.0.76",
+    "gatsby": "^2.9.4",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-google-analytics": "^2.0.13",
     "gatsby-plugin-google-fonts": "^0.0.4",
@@ -19,7 +19,7 @@
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-source-filesystem": "^2.0.16",
-    "gatsby-transformer-remark": "^2.2.0",
+    "gatsby-transformer-remark": "^2.4.0",
     "gatsby-transformer-sharp": "^2.1.8",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
@@ -40,7 +40,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "lint":"eslint .",
+    "lint": "eslint .",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",

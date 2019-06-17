@@ -1,179 +1,22 @@
-/* code[class*='language-'],
-pre[class*='language-'] {
-  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
-    'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
-    'Courier New', Courier, monospace;
-  font-size: 14px;
-  line-height: 1.375;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  background: #2a2734;
-  color: #afa0fe;
-}
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  background: #6a51e6;
-}
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
-  text-shadow: none;
-  background: #6a51e6;
-}
-pre[class*='language-'] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-:not(pre) > code[class*='language-'] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-}
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #6c6783;
-}
-.token.punctuation {
-  color: #6c6783;
-}
-.token.namespace {
-  opacity: 0.7;
-}
-.token.tag,
-.token.operator,
-.token.number {
-  color: #e09142;
-}
-.token.property,
-.token.function {
-  color: #c4b9fe;
-}
-.token.tag-id,
-.token.selector,
-.token.atrule-id {
-  color: #eeebff;
-}
-code.language-javascript,
-.token.attr-name {
-  color: #c4b9fe;
-}
-code.language-css,
-code.language-scss,
-.token.boolean,
-.token.string,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.language-scss .token.string,
-.style .token.string,
-.token.attr-value,
-.token.keyword,
-.token.control,
-.token.directive,
-.token.unit,
-.token.statement,
-.token.regex,
-.token.atrule {
-  color: #fc9;
-}
-.token.placeholder,
-.token.variable {
-  color: #fc9;
-}
-.token.deleted {
-  text-decoration: line-through;
-}
-.token.inserted {
-  border-bottom: 1px dotted #eeebff;
-  text-decoration: none;
-}
-.token.italic {
-  font-style: italic;
-}
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-.token.important {
-  color: #c4b9fe;
-}
-.token.entity {
-  cursor: help;
-}
-pre > code.highlight {
-  outline: 0.4em solid #8a75f5;
-  outline-offset: 0.4em;
-}
-.line-numbers .line-numbers-rows {
-  border-right-color: #2c2937;
-}
-.line-numbers-rows > span:before {
-  color: #3c3949;
-}
-.line-highlight {
-  background: rgba(224, 145, 66, 0.2);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(70%, rgba(224, 145, 66, 0.2)),
-    to(rgba(224, 145, 66, 0))
-  );
-  background: linear-gradient(
-    to right,
-    rgba(224, 145, 66, 0.2) 70%,
-    rgba(224, 145, 66, 0)
-  );
-}
+/**
+ * Dracula Theme originally by Zeno Rocha [@zenorocha]
+ * https://draculatheme.com/
+ *
+ * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ */
 
-# sourceMappingURL=prism-base2tone-evening-dark.css.map */
-
-/*
-Name: Duotone Sea
-Author: by Simurai, adapted from DuoTone themes by Simurai for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-sea-dark.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-/*
-
-Name:       Base16 Atelier Sulphurpool Light
-Author:     Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool)
-
-Prism template by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/prism/)
-Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
-
-*/
 code[class*='language-'],
 pre[class*='language-'] {
-  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
-    'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
-    'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
-    'Courier New', Courier, monospace;
-  font-size: 14px;
-  line-height: 1.375;
-  direction: ltr;
+  color: #f8f8f2;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -181,120 +24,88 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background: #f5f7ff;
-  color: #5e6687;
-}
-
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection,
-code[class*='language-']::-moz-selection,
-code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  background: #dfe2f1;
-}
-
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection,
-code[class*='language-']::selection,
-code[class*='language-'] ::selection {
-  text-shadow: none;
-  background: #dfe2f1;
 }
 
 /* Code blocks */
 pre[class*='language-'] {
   padding: 1em;
   margin: 0.5em 0;
-  hyphens: auto;
   overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #282a36;
 }
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
   padding: 0.1em;
   border-radius: 0.3em;
-  overflow: hidden;
-  white-space: unset;
+  white-space: normal;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #898ea4;
+  color: #6272a4;
 }
 
 .token.punctuation {
-  color: #5e6687;
+  color: #f8f8f2;
 }
 
-.token.namespace {
+.namespace {
   opacity: 0.7;
 }
 
-.token.operator,
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff79c6;
+}
+
 .token.boolean,
 .token.number {
-  color: #c76b29;
+  color: #bd93f9;
 }
 
-.token.property {
-  color: #c08b30;
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #50fa7b;
 }
 
-.token.tag {
-  color: #3d8fd1;
-}
-
-.token.string {
-  color: #22a2c9;
-}
-
-.token.selector {
-  color: #6679cc;
-}
-
-.token.attr-name {
-  color: #c76b29;
-}
-
+.token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string {
-  color: #22a2c9;
-}
-
-.token.attr-value,
-.token.keyword,
-.token.control,
-.token.directive,
-.token.unit {
-  color: #ac9739;
-}
-
-.token.statement,
-.token.regex,
-.token.atrule {
-  color: #22a2c9;
-}
-
-.token.placeholder,
+.style .token.string,
 .token.variable {
-  color: #3d8fd1;
+  color: #f8f8f2;
 }
 
-.token.deleted {
-  text-decoration: line-through;
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #f1fa8c;
 }
 
-.token.inserted {
-  border-bottom: 1px dotted #202746;
-  text-decoration: none;
+.token.keyword {
+  color: #8be9fd;
 }
 
-.token.italic {
-  font-style: italic;
+.token.regex,
+.token.important {
+  color: #ffb86c;
 }
 
 .token.important,
@@ -302,43 +113,10 @@ pre[class*='language-'] {
   font-weight: bold;
 }
 
-.token.important {
-  color: #c94922;
+.token.italic {
+  font-style: italic;
 }
 
 .token.entity {
   cursor: help;
-}
-
-pre > code.highlight {
-  outline: 0.4em solid #c94922;
-  outline-offset: 0.4em;
-}
-
-/* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
- */
-.line-numbers .line-numbers-rows {
-  border-right-color: #dfe2f1;
-}
-
-.line-numbers-rows > span:before {
-  color: #979db4;
-}
-
-/* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
- */
-.line-highlight {
-  background: rgba(107, 115, 148, 0.2);
-  background: -webkit-linear-gradient(
-    left,
-    rgba(107, 115, 148, 0.2) 70%,
-    rgba(107, 115, 148, 0)
-  );
-  background: linear-gradient(
-    to right,
-    rgba(107, 115, 148, 0.2) 70%,
-    rgba(107, 115, 148, 0)
-  );
 }

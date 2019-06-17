@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `unexpectedtoken.io`,
+    siteUrl: `http://unexpectedtoken.io`,
     pathPrefix: '',
     siteTitle: 'unexpectedtoken.io',
     siteLogo: `logo.png`,
@@ -63,7 +63,6 @@ module.exports = {
         name: 'videos',
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
