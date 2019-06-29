@@ -19,7 +19,7 @@ const Body = props => (
     <Text
       as={Hyphens}
       css={{ maxWidth: '800px' }}
-      fontFamily="Muli"
+      fontFamily="Merriweather"
       fontSize={[0, 2, 3]}
       lineHeight={1.8}
     >
