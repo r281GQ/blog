@@ -6,7 +6,6 @@
   "author": "Endre Vegh",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "crocks": "^0.11.1",
     "gatsby": "^2.9.4",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-google-analytics": "^2.0.13",

@@ -1,12 +1,7 @@
-import State from 'crocks/State'
-import runWith from 'crocks/pointfree/runWith'
 import {
   __,
   append,
   always,
-  converge,
-  concat,
-  compose,
   ifElse,
   map,
   path,
@@ -17,8 +12,6 @@ import {
 import urljoin from 'url-join'
 
 import formatDate from './../../util/formatDate'
-
-const { get, modify } = State
 
 const onFrontMatter = append(__, ['data', 'markdownRemark', 'frontmatter'])
 
@@ -41,33 +34,6 @@ export const getRepo = ifElse(
   pathEq(onFrontMatter('repo'), 'null'),
   always(null),
   path(onFrontMatter('repo'))
-)
-
-const getDev = ifElse(pathEq(onFrontMatter('dev'), 'null'), always(null), x => [
-  { d: path(onFrontMatter('dev'))(x) },
-])
-
-const getHlp = ifElse(pathEq(onFrontMatter('hlp'), 'null'), always(null), x => [
-  { x: path(onFrontMatter('hlp'))(x) },
-])
-
-const getMed = ifElse(pathEq(onFrontMatter('med'), 'null'), always(null), x => [
-  { y: path(onFrontMatter('med'))(x) },
-])
-
-const checkArray = el => ifElse(always(Array.isArray(el)), always(el), () => [])
-
-const addElement = el => get(checkArray(el)).chain(x => modify(concat(x)))
-
-const createArray = (a, b, c) =>
-  addElement(a)
-    .chain(always(addElement(b)))
-    .chain(always(addElement(c)))
-
-export const getAlternates = compose(
-  x => x.snd(),
-  runWith([]),
-  converge(createArray, [getDev, getHlp, getMed])
 )
 
 export const getUrl = (data, props) =>

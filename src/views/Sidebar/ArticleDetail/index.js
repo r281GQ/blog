@@ -67,20 +67,6 @@ const ArticleDetail = props => (
           <Twitter url={props.url} />
         </Flex>
       </Flex>
-      {props.alternates.length !== 0 && (
-        <Box collapse={1} as={Collapseable} reverse my={2} flex="1 1 auto">
-          <Text fontWeight="bold">You can also read it on</Text>
-          {props.alternates.map(i => (
-            <a
-              key={Object.keys(i)[0]}
-              target="blank"
-              href={`https://${Object.values(i)[0]}`}
-            >
-              <Text>{`${Object.keys(i)[0]}`}</Text>
-            </a>
-          ))}
-        </Box>
-      )}
     </Flex>
   </Box>
 )

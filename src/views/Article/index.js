@@ -22,7 +22,6 @@ const Article = props => (
               date: renderProps.date,
               location: renderProps.location,
               url: renderProps.url,
-              alternates: renderProps.alternates,
               repo: renderProps.repo,
             }}
             content={renderProps.content}

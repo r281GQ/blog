@@ -14,7 +14,6 @@ import {
   getTitle,
   getUrl,
   getRepo,
-  getAlternates,
 } from './functions'
 
 export default props => (
@@ -39,7 +38,6 @@ export default props => (
           url: getUrl(data, props),
           location: getLocation(props),
           repo: getRepo(props),
-          alternates: getAlternates(props),
         })}
         <SEO
           isJournal
