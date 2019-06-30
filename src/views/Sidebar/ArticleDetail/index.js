@@ -13,7 +13,7 @@ const ArticleDetail = props => (
       mb={[1, 4]}
       lineHeight={2}
       textAlign="right"
-      flexDirection={['column', 'row', 'row', 'column', 'column']}
+      flexDirection={['row', 'row', 'row', 'column', 'column']}
       alignItems={['center', 'baseline', 'baseline', 'center']}
       fontSize={[0]}
       css={{ textAlign: 'center', width: '100%' }}

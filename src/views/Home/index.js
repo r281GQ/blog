@@ -22,7 +22,7 @@ export default props => (
       <Text fontSize={3} my={4}>
         about
       </Text>
-      <Text fontFamily="Muli">
+      <Text fontFamily="Merriweather">
         <StaticQuery
           query={graphql`
             query aboutHome {
