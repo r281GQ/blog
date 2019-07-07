@@ -28,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Merriweather`,`Rubik`, `Roboto`, `Muli\:300`],
+        fonts: [`Merriweather`, `Rubik`, `Roboto`, `Muli\:300`],
       },
     },
     `gatsby-plugin-styled-components`,
@@ -68,6 +68,7 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-prismjs',
+          '@weknow/gatsby-remark-twitter',
           {
             resolve: 'gatsby-remark-images',
             options: {
