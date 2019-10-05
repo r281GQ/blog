@@ -8,6 +8,9 @@ yarn-error.log*
 #content
 content/
 
+#vscode
+.vscode
+
 # Runtime data
 pids
 *.pid

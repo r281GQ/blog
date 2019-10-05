@@ -42,7 +42,7 @@ export default props => (
         <SEO
           isJournal
           excerpt={getExcerpt({ content: getHtml(props) })}
-          postMeta={props(props)}
+          postMeta={getFrontMatter(props)}
         />
       </>
     )}
