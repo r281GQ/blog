@@ -87,8 +87,7 @@ const About = props => (
               <Text my={3}>
                 This is built with Gatsby.js sitting on AWS. Gatsby is an
                 amazing static-site generator built around React, Redux, Graphql
-                and SSR. I am using Rebass as a component library here with some
-                Ramda to set up the neccessary logic.
+                and SSR. I am using Rebass as a component library.
               </Text>
             </Flex>
           </Flex>
